@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Terminal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-title">FastAPI Terminal</div>
+            <div class="terminal-controls">
+                <button class="control-btn" onclick="clearTerminal()">Clear</button>
+                <button class="control-btn" onclick="toggleConnection()">Disconnect</button>
+            </div>
+        </div>
+        <div class="terminal" id="terminal">
+            <div class="terminal-output" id="output"></div>
+                    <div class="terminal-input-line" id="input-line">
+            <span class="prompt" id="prompt">$</span>
+            <input type="text" class="terminal-input" id="command-input" autocomplete="off" spellcheck="false" placeholder="Type commands here...">
+        </div>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        <span id="connection-status">Connecting...</span>
+        <span id="current-directory"></span>
+        <span class="mode-indicator">Normal Mode | Type 'interactive' for interactive shell</span>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
